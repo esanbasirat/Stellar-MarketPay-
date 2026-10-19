@@ -1,6 +1,12 @@
 "use strict";
 
 const { SorobanRpc, Contract } = require("@stellar/stellar-sdk");
+const {
+  SorobanContractError,
+  CONTRACT_ERROR_CODES,
+  getContractErrorCode,
+  mapContractError,
+} = require("../utils/contractErrors");
 
 const SOROBAN_RPC_URL =
   process.env.SOROBAN_RPC_URL ||
@@ -44,9 +50,7 @@ async function readContractValue(contractId, method, args = []) {
   );
 
   if (SorobanRpc.Api.isSimulationError(result)) {
-    throw new Error(
-      `Soroban simulation failed for ${method}: ${result.error}`,
-    );
+    throw mapContractError(result.error, method);
   }
 
   return result.result ?? null;
@@ -58,4 +62,8 @@ module.exports = {
   getContract,
   readContractValue,
   SOROBAN_RPC_URL,
+  SorobanContractError,
+  CONTRACT_ERROR_CODES,
+  getContractErrorCode,
+  mapContractError,
 };

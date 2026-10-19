@@ -30,6 +30,7 @@ Welcome to Stellar MarketPay documentation. This index helps you find what you n
 - **[Freelancer Onboarding Flow](./onboarding-flow.md)** - Multi-step freelancer onboarding walkthrough and UX architecture
 - **[Soroban Contract Deployment](./contract-deployment.md)** - Build, deploy, and configure the escrow contract
 - **[Smart Contract API Reference](./contract-api-reference.md)** - Complete function reference for the MarketPay Soroban contract
+- **[Arbitrator Registry Contract](../contracts/arbitrator-registry/README.md)** - DAO-governed registry and staking for dispute arbitrators
 - **[Environment Variables](./environment-variables.md)** - Single source of truth for runtime config
 - **[Load Testing Guide](./load-testing.md)** - End-to-end k6 load testing, SLA thresholds, trend reports, and cost optimization
 
@@ -37,6 +38,7 @@ Welcome to Stellar MarketPay documentation. This index helps you find what you n
 
 - **[API Reference](./api.md)** - Detailed API reference
 - **[Smart Contract API Reference](./contract-api-reference.md)** - Every public function, event, and error in the Soroban contract
+- **[Arbitrator Registry API Reference](../contracts/arbitrator-registry/README.md)** - Public functions, storage model, and auth rules for the arbitrator registry contract
 - **[Scope WebSocket Protocol](./websocket-scope-protocol.md)** - Realtime session protocol and client schema
 
 ---
@@ -313,6 +315,7 @@ stellar-marketpay/
 **Disputes & Evidence**
 
 - [Dispute Resolution](./dispute-resolution.md)
+- [Arbitrator Registry Contract](../contracts/arbitrator-registry/README.md)
 - [Pinata IPFS Setup](./ipfs-setup.md)
 - [FAQ: Disputes & Refunds](./FAQ.md#disputes--refunds)
 - [ADR-003: Database Schema](./adr/adr-003-database-schema-escrow.md)

@@ -2,8 +2,8 @@ import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "./tests/e2e",
-  snapshotDir: "./test-results/snapshots",
-  snapshotPathTemplate: "{snapshotDir}/{arg}{ext}",
+  snapshotDir: "./tests/e2e/snapshots",
+  snapshotPathTemplate: "{snapshotDir}/{testFileName}-snapshots/{arg}-{projectName}-{platform}{ext}",
   timeout: 240_000, // Increased from 60_000 (4 min for E2E tests)
   expect: {
     timeout: 15_000, // Increased from 10_000 (15s)

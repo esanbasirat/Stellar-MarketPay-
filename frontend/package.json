@@ -15,6 +15,8 @@
     "test:update-snapshots": "npx jest -u",
     "test:e2e": "playwright test",
     "test:a11y": "playwright test accessibility",
+    "test:visual": "playwright test visual-regression",
+    "test:visual:update": "playwright test visual-regression --update-snapshots",
     "audit:contrast": "node scripts/audit-contrast.mjs",
     "analyze": "node scripts/build-analyze.mjs",
     "storybook": "storybook dev -p 6006",
